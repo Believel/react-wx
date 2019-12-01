@@ -1,10 +1,14 @@
 import React from 'react';
-import { Button } from 'antd-mobile';
+import { Route} from 'react-router-dom';
+
+import Report from './views/report/index';
+const setTitle = (title) => document.title = title;
 function App() {
   return (
-    <div>
-      <Button type="primary">default</Button>
-    </div>
+    <>
+      <Route path="/" exact component={Report}/>
+      <Route path="/report" component={Report} onEnter={setTitle('学习报告')}></Route>
+    </>
   );
 }
 

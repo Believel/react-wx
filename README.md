@@ -11,13 +11,19 @@ npm install react-app-rewired customize-cra /1
             antd-mobile babel-plugin-import /2
             postcss-pxtorem /3
             node-sass /4
+            react-router-dom /5
             --save
 ```
 1. 在不使用eject的情况下实现自定义脚手架的配置
   * 在项目根目录，创建一个文件`config-overrides.js`
   ```js
-    const {override, fixBabelImports, addPostcssPlugins } = require('customize-cra');
-    module.epxorts = override(
+    const {override, fixBabelImports, addPostcssPlugins, addWebpackAlias } = require('customize-cra');
+    module.exports = override(
+      // add webpack alias
+      addWebpackAlias({
+        ['@']: path.resolve(__dirname, 'src'),
+        ['components']: path.resolve(__dirname, 'src/components')
+      }),
       // babel-plugin-import
       fixBabelImports('import', {
         libraryName: 'antd-mobile',
