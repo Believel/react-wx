@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Box from 'components/Box/index';
 import Rate from 'components/Rate/index';
+import {Loading} from 'components/HOC/Loading';
 
 import './index.scss';
 import logo from '@/assets/imgs/logo.svg';
 import avatar from '@/assets/imgs/avatar.jpg';
-export default class Report extends Component {
+class Report extends Component {
   state = {
-    value: 2
+    value: 2,
+    isLoading: true
   }
   handleInput = (value) => {
     this.setState({
@@ -87,3 +89,4 @@ export default class Report extends Component {
     )
   }
 }
+export default Loading(Report)
