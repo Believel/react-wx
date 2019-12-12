@@ -89,4 +89,11 @@ class Report extends Component {
     )
   }
 }
-export default Loading(Report)
+
+
+export default class Wraper extends React.Component {
+  render() {
+    let Loa = Loading(Report);
+    return <Loa isLoading={false} />
+  }
+}
