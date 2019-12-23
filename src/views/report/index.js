@@ -8,8 +8,7 @@ import logo from '@/assets/imgs/logo.svg';
 import avatar from '@/assets/imgs/avatar.jpg';
 class Report extends Component {
   state = {
-    value: 2,
-    isLoading: true
+    value: 2
   }
   handleInput = (value) => {
     this.setState({
