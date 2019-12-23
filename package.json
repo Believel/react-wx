@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^2.3.1",
+    "bowser": "^2.7.0",
     "customize-cra": "^0.9.1",
     "node-sass": "^4.13.0",
     "postcss-pxtorem": "^4.0.1",
